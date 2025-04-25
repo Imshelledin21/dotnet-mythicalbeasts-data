@@ -26,3 +26,13 @@ jobs:
       run: dotnet build ./mythicalbeasts-data --no-restore
     - name: Test
       run: dotnet test ./mythicalbeasts-data --no-build --verbosity normal
+    - name: Build Docker Image
+      working-directory: ./mythicalbeasts-data
+      run: docker build . -t imshelledin21/mythicalbeasts-data:latest -t imshelledin21/mythicalbeasts-data:v0.0.1
+    - name: Log into Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: imshelledin21
+        password: ${{ secrets.DOCKER_TOKEN }}
+    - name: Push image to Docker Hub
+      run: docker push imshelledin21/mythicalbeasts-data -a
