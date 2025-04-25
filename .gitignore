@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/mythicalbeasts-data/.vs/mythicalbeasts-data
+/mythicalbeasts-data/obj
+/mythicalbeasts-data/bin/Debug/net8.0
