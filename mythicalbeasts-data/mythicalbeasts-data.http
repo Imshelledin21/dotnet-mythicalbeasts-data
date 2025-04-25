@@ -1,0 +1,6 @@
+@mythicalbeasts_data_HostAddress = http://localhost:5038
+
+GET {{mythicalbeasts_data_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
