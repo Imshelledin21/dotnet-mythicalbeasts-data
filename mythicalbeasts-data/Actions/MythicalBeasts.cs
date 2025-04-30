@@ -6,6 +6,7 @@ namespace mythicalbeasts_data.Actions
 {
     public class MythicalBeasts
     {
+        
         public List<MythicalBeast> GetAll()
         {
             var beasts = Global.MythicalBeasts.Current;

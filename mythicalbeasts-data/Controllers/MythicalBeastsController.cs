@@ -7,10 +7,10 @@ namespace mythicalbeasts_data.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class MythicalBeasts : Controller
+    public class MythicalBeastsController : Controller
     {
         // GET: MythicalBeasts
-        [HttpGet(Name = "GetMythicalBeasts")]
+        [HttpGet("/MythicalBeasts", Name = "GetMythicalBeasts")]
         public List<MythicalBeast> Index()
         {
             Actions.MythicalBeasts mythicalBeasts = new Actions.MythicalBeasts();
@@ -20,7 +20,7 @@ namespace mythicalbeasts_data.Controllers
         }
 
         // GET: MythicalBeasts/Details/5
-        [HttpGet("/{id}", Name = "GetMythicalBeast")]
+        [HttpGet("/MythicalBeasts/{id}", Name = "GetMythicalBeast")]
         public MythicalBeast Details(int id)
         {
             Actions.MythicalBeasts mythicalBeasts = new Actions.MythicalBeasts();
